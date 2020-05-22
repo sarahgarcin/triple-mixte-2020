@@ -1,0 +1,85 @@
+// -------------- MOBILE-FIRST HOME --------------
+#home-slider{
+	position:absolute;
+	width:100%;
+	height: calc(100vh - 52px);
+	top: 52px;
+	left: 0;
+	overflow: hidden;
+	figure{
+		height: calc(100vh - 52px);
+		position:relative;
+		img{
+			width:auto;
+			height: 100%;
+			position: absolute;
+		}
+	}
+}
+
+.slick-prev{
+	left: $marginNormal; 
+	z-index: 100; 
+}
+
+.slick-next{
+	right: $marginBig; 
+}
+
+.slick-prev::before, .slick-next::before{
+	font-size: 40px;
+}
+
+.slick-dots{
+	bottom: 0;
+	z-index: 100;  
+	li{
+		width: 40px; 
+		height: 40px;
+		button{
+			width: 40px;
+			height: 40px;
+			&:hover::before{
+				color: $mainColor;
+			}
+			&::before{
+				width: 40px;
+				height: 40px;
+				color: #FFF;
+				z-index:100;
+				font-size: 50px;
+				opacity: 0.8;
+			}
+		}
+		&.slick-active 
+			button::before{
+				color: $mainColor; 
+				opacity: 1;
+			}
+	}
+}
+
+
+// -------------- DESKTOP HOME --------------
+@media only screen and (min-width: 64em){
+	#home-slider{
+		height: calc(100vh - 88px);
+		top: 88px;
+		figure{
+			height: calc(100vh - 88px);
+			img{
+				width:100%;
+				height:auto;
+				top: -100%;
+				transform: translateY(50%);
+			}
+		}
+	}
+
+}
+
+
+
+
+
+

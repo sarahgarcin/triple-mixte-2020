@@ -1,0 +1,29 @@
+title: Atelier
+preset: page
+pages: false
+
+fields:
+  cover: 
+    label: Image de couverture
+    type: files
+    width: 1/2
+    mode: single
+  imgleft: 
+    label: Image colonne de gauche
+    type: files
+    width: 1/2
+    mode: single
+  infos: 
+    label: Texte synthétique / Infos
+    type: markdown
+    size: small
+    help: S'affiche dans la colonne de gauche
+  text:
+    label: Texte
+    type: markdown
+    size: medium
+    help: S'affiche dans la colonne de droite
+  imageslist: 
+    label: Images
+    type: files
+

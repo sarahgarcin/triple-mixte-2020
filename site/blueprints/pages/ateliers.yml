@@ -1,0 +1,9 @@
+title: Ateliers
+preset: pages
+pages: true
+drafts:
+  template: 
+    - ateliers
+    - atelier
+
+

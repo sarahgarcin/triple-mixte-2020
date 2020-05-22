@@ -1,0 +1,171 @@
+  // I M P O R T
+  // -------------- MOBILE-FIRST --------------
+  @import "_variables.scss";
+
+  *{
+    box-sizing: border-box;
+  	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body{
+  	margin: 0; 
+    font-size: $textSize; 
+    font-family: $font;
+    background: $backgroundColor;
+    line-height: 1.4;
+    color: rgb(41, 41, 41);
+  }
+
+  // -------------- RESET.CSS --------------
+  ul, ol{margin:0; padding:0;}
+  li{list-style:none;}
+  a{color: $mainColor;text-decoration: none;}
+  a:visited{color: $mainColor;}
+  a:hover{border-bottom:0.1em solid currentcolor;}
+  img {width: 100%;}
+  figure{margin:0;}
+  figcaption{
+    font-size: .8em;
+    &::before{
+      content: '→ ';
+    }
+    p{
+      margin:0; 
+      font-size: .8em;
+      display: inline-block;
+    }
+  }
+  p{
+    font-size: $textSize; 
+  }
+  
+  h1{
+    font-size: 3rem;
+    margin-top:$marginSmall;
+    margin-bottom: $marginNormal;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+  h2{
+    color: $mainColor;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  h2 + ul{
+    margin-top: $marginNormal;
+  }
+
+  h3{
+    text-decoration:underline;
+    font-size:$textSize; 
+  }
+
+
+  h4{
+    color: $rose; 
+    font-weight: 700;
+    margin-bottom: $marginNormal;
+  }
+
+  h5{
+    margin-top: $marginBig;
+    margin-bottom: $marginSmall;
+  }
+
+  blockquote{
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    border-left: 5px solid rgba(17, 33, 77, 0.2);
+  }
+
+
+  video, iframe{
+    width: 100%;
+  }
+
+  figure{
+    &.border{
+      border: 0.1em solid rgba(0,0,0,.1);
+      box-shadow: 0 1px 4px rgba(0,0,0,.1);
+    }
+  }
+
+
+  // -------------- IMPORT TEMPlATES STYLES --------------
+  @import "header.scss";
+  @import "home.scss";
+  @import "article.scss";
+
+
+  // -------------- MOBILE-FIRST GENERAL --------------
+  .show-for-small-only{
+  	display:block;
+  }
+
+  .hide-for-small-only{
+  	display:none;
+  }
+
+
+  main{
+    padding: 90px $marginBig; 
+    font-size: $textSize;
+    margin-bottom: 200px;
+    width: 100%;
+    margin:auto;
+    max-width: 1500px;
+    .content{
+      margin-top: $marginBig;
+      figure{
+        margin: $marginNormal 0;
+      }
+      h2{
+        margin-top: $marginBig;
+
+      }
+      h3{
+
+      }
+      ul{
+        padding-left: $marginBig;
+        li{
+          list-style: none;
+          margin-bottom: $marginNormal;
+            &::before{
+              content: '→ ';
+              color: $mainColor;
+              margin-left: -30px;
+              margin-right: 5px;
+            }
+        }
+      }
+      ol{
+        padding-left: $marginBig;
+        li{
+          list-style: decimal;
+        }
+      }
+    }
+  } 
+
+
+  // -------------- DESKTOP GENERAL --------------
+  @media only screen and (min-width: 48em){
+    main{
+      padding: 150px 80px; 
+    }
+    .show-for-small-only{
+        display:none !important;
+    }
+    .hide-for-small-only{
+        display:block !important;
+    }
+  }
+
+
+
+
+

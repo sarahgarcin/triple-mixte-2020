@@ -1,0 +1,119 @@
+// -------------- MOBILE-FIRST --------------
+.page-header{
+	h1{
+		color: $mainColor; 
+		border-bottom: 2px solid $mainColor;
+		text-align: center; 
+		padding-bottom: $marginSmall; 
+		font-weight: 300; 
+		position:relative;
+		a{
+			font-size: 25px;
+			position: absolute;
+			left:-20px;
+			top:15px;
+			&:hover{
+				border:none;
+			}
+		}	
+	}
+
+}
+
+.left-col{
+	border-top: 1px solid #292929; 
+	margin-top: $marginBig;
+	padding-top: $marginBig;
+	h2{
+		font-size: $textSize;
+		border-bottom: 1px solid $mainColor;
+		padding-bottom: $marginSmall;
+		&::before{
+      content: '→ ';
+    }
+	}
+	p{
+		font-size: $menuSize; 
+	}
+}
+
+main .content.ateliers-list{
+	ul {
+		padding:0;
+		li{
+			position:relative;
+			.atelier-image-cover{
+				transition: all 0.5s ease; 
+				opacity:1;
+			}
+			&:hover{
+				.atelier-image-cover{
+					opacity: 0.8;
+				}
+			} 
+			.atelier-title{
+				position: absolute; 
+				background: rgba(29,29,29,0.7);
+				bottom: 7px; 
+				left: 1rem; 
+				right: 1rem; 
+				h2{
+					color: #FFF; 
+					font-size: $menuSize;
+					margin: 0; 
+					padding: $marginSmall;
+				}
+			}
+			&:before{
+				content:"";
+			}	
+		}
+	}
+}
+
+.image-gallery{
+	a:hover{border:none;}
+	figure{
+		transition: all 0.5s ease; 
+		opacity:1;
+		&:hover{
+			opacity: 0.8;
+		} 
+	}
+}
+
+.portraits-list{
+	section{
+		border-bottom: 1px solid #292929;
+		padding-bottom: $marginNormal;
+		article{
+			margin-bottom: $marginBig;
+		}
+	}
+}
+
+
+
+// -------------- DESKTOP PROJECTS --------------
+@media only screen and (min-width: 64em){
+	.left-col{
+		padding-right: $marginBig;
+		border-top: none; 
+		margin-top: 0;
+		padding-top: 0;
+	}
+
+	.page-header{
+		h1{
+			a{
+				font-size: 40px;
+				left:0;
+				top:10px;
+			}	
+		}
+
+	}
+
+
+}
+
