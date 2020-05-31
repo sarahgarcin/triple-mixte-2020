@@ -6,5 +6,8 @@ fields:
   caroussel: 
     label: Images
     type: files
+  text:
+    label: Texte
+    type: markdown
 
 

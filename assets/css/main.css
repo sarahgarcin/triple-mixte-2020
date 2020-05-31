@@ -131,7 +131,10 @@ header {
     header .mobile-menu_logo a, header .desktop-menu_logo a {
       border: none; }
   header #canvas-wrapper {
-    width: 64px; }
+    width: 84px;
+    height: 84px;
+    border: 2px solid #FFF;
+    padding: 10px; }
   header .mobile-menu_btn {
     display: block;
     position: relative;
@@ -215,7 +218,7 @@ header {
     header .mobile-menu_logo, header .desktop-menu_logo {
       padding: 10px 40px; }
       header .mobile-menu_logo h1, header .desktop-menu_logo h1 {
-        margin-top: 10px; }
+        margin-top: 23px; }
     header .nav {
       height: auto;
       min-height: auto;
@@ -231,8 +234,7 @@ header {
       flex: 2; }
     header .main-nav {
       margin-top: 0;
-      margin-bottom: 0;
-      padding: 5px 0 10px 10px; }
+      margin-bottom: 0; }
       header .main-nav li {
         text-align: center;
         -webkit-box-pack: center;
@@ -255,6 +257,20 @@ header {
   #home-slider figure {
     height: calc(100vh - 52px);
     position: relative; }
+    #home-slider figure figcaption {
+      color: #FFF;
+      font-size: 1.5rem;
+      position: absolute;
+      z-index: 101;
+      font-weight: 600;
+      top: 40px;
+      left: 10px; }
+      #home-slider figure figcaption .text-presentation {
+        border-bottom: 1px solid #FFF;
+        padding-bottom: 20px;
+        margin-bottom: 20px; }
+      #home-slider figure figcaption::before {
+        content: ""; }
     #home-slider figure img {
       width: auto;
       height: 100%;
@@ -298,6 +314,12 @@ header {
     top: 88px; }
     #home-slider figure {
       height: calc(100vh - 88px); }
+      #home-slider figure figcaption {
+        top: 50vh;
+        left: 7%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%); }
       #home-slider figure img {
         width: 100%;
         height: auto;
@@ -306,20 +328,22 @@ header {
         -ms-transform: translateY(50%);
         transform: translateY(50%); } }
 
-.page-header h1 {
-  color: #ff2d00;
-  border-bottom: 2px solid #ff2d00;
-  text-align: center;
-  padding-bottom: 10px;
-  font-weight: 300;
-  position: relative; }
-  .page-header h1 a {
-    font-size: 25px;
-    position: absolute;
-    left: -20px;
-    top: 15px; }
-    .page-header h1 a:hover {
-      border: none; }
+.page-header {
+  margin: auto; }
+  .page-header h1 {
+    color: #ff2d00;
+    border-bottom: 2px solid #ff2d00;
+    text-align: center;
+    padding-bottom: 10px;
+    font-weight: 300;
+    position: relative; }
+    .page-header h1 a {
+      font-size: 25px;
+      position: absolute;
+      left: -20px;
+      top: 15px; }
+      .page-header h1 a:hover {
+        border: none; }
 
 .left-col {
   border-top: 1px solid #292929;
@@ -336,6 +360,9 @@ header {
 
 main .content.ateliers-list ul {
   padding: 0; }
+  main .content.ateliers-list ul .year-title {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ff2d00; }
   main .content.ateliers-list ul li {
     position: relative; }
     main .content.ateliers-list ul li .atelier-image-cover {
@@ -370,11 +397,27 @@ main .content.ateliers-list ul {
   .image-gallery figure:hover {
     opacity: 0.8; }
 
-.portraits-list section {
+.content .portraits-list ul > li {
+  cursor: pointer; }
+  .content .portraits-list ul > li::before {
+    content: "";
+    margin: 0; }
+  .content .portraits-list ul > li h2 {
+    margin-top: 40px;
+    text-align: center; }
+
+.content .portraits-list section {
   border-bottom: 1px solid #292929;
-  padding-bottom: 20px; }
-  .portraits-list section article {
-    margin-bottom: 40px; }
+  padding-bottom: 10px; }
+  .content .portraits-list section article {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear; }
+    .content .portraits-list section article.show {
+      margin-bottom: 40px;
+      max-height: 5000px; }
 
 @media only screen and (min-width: 64em) {
   .left-col {
@@ -384,7 +427,7 @@ main .content.ateliers-list ul {
     padding-top: 0; }
   .page-header h1 a {
     font-size: 40px;
-    left: 0;
+    left: -60px;
     top: 10px; } }
 
 .show-for-small-only {

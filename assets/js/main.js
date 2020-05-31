@@ -49,6 +49,20 @@ function init(){
 
 	});
 
+	// page acteurs
+	$('.portraits-list li').click(function(){
+		$(".portraits-list li").find('article').removeClass('show');
+		if($(this).hasClass('active')){
+			$(this).removeClass('active');
+			$(this).find('article').removeClass('show')
+		}
+		else{
+			$(this).addClass('active');
+			$(this).find('article').addClass('show');
+		}
+		
+	});
+
 }
 
 

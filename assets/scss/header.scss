@@ -34,7 +34,10 @@ header{
 		}
 	}
 	#canvas-wrapper{
-		width: 64px;
+		width: 84px;
+		height: 84px; 
+		border: 2px solid #FFF; 
+		padding: 10px;
 	}
 	.mobile-menu_btn{
 		display:block;
@@ -116,7 +119,7 @@ header{
 		.mobile-menu_logo, .desktop-menu_logo{
 			padding: $marginSmall $marginBig;
 			h1{
-				margin-top: $marginSmall;
+				margin-top: 23px;
 			}
 		}
 		.nav{ 
@@ -133,7 +136,7 @@ header{
 		.main-nav{
 			margin-top:0;
 			margin-bottom: 0;
-			padding: 5px 0 $marginSmall $marginSmall;
+			// padding: 5px 0 $marginSmall $marginSmall;
 			li{
 				text-align: center;
 				justify-content: center;

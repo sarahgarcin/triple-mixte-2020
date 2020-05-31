@@ -1,0 +1,19 @@
+title: Acteur
+preset: page
+pages: false
+
+fields:
+  portraits: 
+    label: Portraits
+    type: structure
+    fields: 
+      cover: 
+        label: Image
+        type: files
+        mode: single
+      title: 
+        label: Nom
+        type: text
+      text:
+        label: Texte
+        type: markdown

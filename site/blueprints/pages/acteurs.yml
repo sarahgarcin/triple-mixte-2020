@@ -1,38 +1,39 @@
 title: Les acteurs
-preset: page
-pages: false
+preset: pages
+drafts: 
+  template: acteur
 
-fields:
-  # inside the fields section of your blueprint:
-  mybuilder:
-    label: Page les acteurs
-    type: builder
-    columns: 1 # Optional. If set to 2 or more, the builder blocks will be placed in a grid.
-    fieldsets:
-      eltitle: 
-        name: Titre de la partie
-        fields: 
-          title: 
-            label: Titre de la partie
-            type: text
-      portraits:
-        name: Portraits
-        fields:
-          portraitlist: # The Builder Field can even be nested!
-            type: builder
-            label: Liste des portrait
-            columns: 1
-            fieldsets:
-              portrait:
-                label: Portrait
-                fields:
-                  cover: 
-                    label: Image
-                    type: files
-                    mode: single
-                  title: 
-                    label: Nom
-                    type: text
-                  text:
-                    label: Texte
-                    type: markdown
+# fields:
+#   # inside the fields section of your blueprint:
+#   mybuilder:
+#     label: Page les acteurs
+#     type: builder
+#     columns: 1 # Optional. If set to 2 or more, the builder blocks will be placed in a grid.
+#     fieldsets:
+#       eltitle: 
+#         name: Titre de la partie
+#         fields: 
+#           title: 
+#             label: Titre de la partie
+#             type: text
+#       portraits:
+#         name: Portraits
+#         fields:
+#           portraitlist: # The Builder Field can even be nested!
+#             type: builder
+#             label: Liste des portrait
+#             columns: 1
+#             fieldsets:
+#               portrait:
+#                 label: Portrait
+#                 fields:
+#                   cover: 
+#                     label: Image
+#                     type: files
+#                     mode: single
+#                   title: 
+#                     label: Nom
+#                     type: text
+#                   text:
+#                     label: Texte
+#                     type: markdown

@@ -1,5 +1,6 @@
 // -------------- MOBILE-FIRST --------------
 .page-header{
+	margin:auto;
 	h1{
 		color: $mainColor; 
 		border-bottom: 2px solid $mainColor;
@@ -40,6 +41,10 @@
 main .content.ateliers-list{
 	ul {
 		padding:0;
+		.year-title{
+			padding-bottom: $marginSmall;
+			border-bottom: 2px solid $mainColor;
+		}
 		li{
 			position:relative;
 			.atelier-image-cover{
@@ -82,12 +87,33 @@ main .content.ateliers-list{
 	}
 }
 
-.portraits-list{
+.content .portraits-list{
+	ul > li {
+		cursor: pointer;
+		&::before{
+			content:"";
+			margin:0;
+		}
+		h2{
+			margin-top: $marginBig;
+			text-align:center;
+		}
+
+	}
 	section{
 		border-bottom: 1px solid #292929;
-		padding-bottom: $marginNormal;
+		padding-bottom: $marginSmall;
 		article{
-			margin-bottom: $marginBig;
+			// display:none;
+			
+			max-height: 0; 
+			overflow: hidden; 
+			transition: all 1s linear;
+			&.show{
+				margin-bottom: $marginBig;
+				max-height: 5000px;
+				// display: flex;
+			}
 		}
 	}
 }
@@ -107,7 +133,7 @@ main .content.ateliers-list{
 		h1{
 			a{
 				font-size: 40px;
-				left:0;
+				left:-60px;
 				top:10px;
 			}	
 		}
