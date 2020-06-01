@@ -32,7 +32,7 @@
   <meta property="og:title"        content="<?php echo $page->title()->html() ?>">
   <meta property="og:description"  content="<?php e( $page->text()->isNotEmpty(), $page->text()->excerpt(600), $site->description()->excerpt(600)) ?>">
   <meta property="og:type"         content="website">
-  <?php if ( $page->hasImages() && $image = $site->images()->sortBy('sort', 'asc')->first() ): ?>
+  <?php if ( $site->find('home')->hasImages() && $image = $site->find('home')->images()->sortBy('sort', 'asc')->first() ): ?>
   <meta property="og:image"        content="<?php echo $image->resize(800, 800)->url() ?>">
   <?php endif; ?>
 
@@ -41,7 +41,7 @@
   <meta name="twitter:creator"     content="<?php echo $site->author()->html() ?>">
   <meta name="twitter:title"       content="<?php echo $page->title()->html() ?>">
   <meta name="twitter:description" content="<?php e( $page->text()->isNotEmpty(), $page->text()->excerpt(600), $site->description()->excerpt(600)) ?>">
-  <?php if ( $page->hasImages() && $image = $page->images()->sortBy('sort', 'asc')->first() ): ?>
+  <?php if ( $site->find('home')->hasImages() && $image = $site->find('home')->images()->sortBy('sort', 'asc')->first() ): ?>
   <meta name="twitter:image"       content="<?php echo $image->resize(800, 800)->url() ?>">
   <?php endif; ?>
 
