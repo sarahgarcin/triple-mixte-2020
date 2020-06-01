@@ -43,7 +43,8 @@ main .content.ateliers-list{
 		padding:0;
 		.year-title{
 			padding-bottom: $marginSmall;
-			border-bottom: 2px solid $mainColor;
+			border-bottom: 1px solid $mainColor;
+			text-align: center; 
 		}
 		li{
 			position:relative;
@@ -88,32 +89,68 @@ main .content.ateliers-list{
 }
 
 .content .portraits-list{
+	ul{
+		padding-left:0;
+		margin-top: $marginBig;
+	}
 	ul > li {
 		cursor: pointer;
+		margin-bottom:$marginNormal;
 		&::before{
 			content:"";
 			margin:0;
 		}
 		h2{
-			margin-top: $marginBig;
+			margin-bottom: 0;
+			margin-top: 0;
 			text-align:center;
+			border-bottom: none;
+			padding-bottom: 0;
+		}
+		&.active{
+			h2{
+				// border-bottom: 1px solid $mainColor;
+				// padding-bottom: $marginSmall;
+			}
 		}
 
 	}
 	section{
-		border-bottom: 1px solid #292929;
+		border-bottom: 1px solid $mainColor;
+		padding-top: $marginSmall;
 		padding-bottom: $marginSmall;
 		article{
-			// display:none;
-			
 			max-height: 0; 
 			overflow: hidden; 
-			transition: all 1s linear;
+			transition: all 1s ease-in-out;
 			&.show{
 				margin-bottom: $marginBig;
 				max-height: 5000px;
-				// display: flex;
 			}
+		}
+	}
+}
+
+.content .ressources{
+	a{
+		color: #000; 
+	}
+
+	section article {
+		h3 {
+			// border-bottom:1px solid #BFBFBF;
+			text-decoration: none;
+			padding-bottom: $marginSmall;
+			// text-align: center; 
+		}
+		p:first-child{
+			margin-top: 0; 
+		}
+		p{
+			font-size: $menuSize;
+		}
+		.image-cover{
+			padding-right:0;
 		}
 	}
 }

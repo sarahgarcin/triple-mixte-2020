@@ -36,7 +36,7 @@ tabs:
             label: Mots-clés (pour les moteurs de recherche)
             type: tags
           description: 
-            label: Description (pour les moteurs de recherche)
+            label: Description (pour la page d'accueil)
             type: textarea
             size: small
           copyright: 

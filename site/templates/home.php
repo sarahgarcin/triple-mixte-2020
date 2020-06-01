@@ -1,6 +1,14 @@
 <?php snippet('header') ?>
 <?php snippet('menu') ?>
 
+	<div class="home-message">
+		<div class="home-message-wrapper">
+			<div class="home-message-content">
+				<h1><?= $site->title()->html() ?></h1>
+				<?= $site->description()->kt() ?>
+			</div>
+		</div>
+	</div>
 	<main>
 		<div id="home-slider">
 		  <?php $images =  $page->caroussel()->toFiles();?>

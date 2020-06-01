@@ -13,7 +13,7 @@
 </div>
 
 <!-- DESKTOP LOGO -->
-<div class="desktop-menu menu hide-for-small-only col-sm-6">
+<div class="desktop-menu menu hide-for-small-only col-sm-4">
 	<div class="desktop-menu_logo logo">
 		<a class="row" href="<?= $site->url()?>" title="<?= $site->title()?>">
 			<div id="canvas-wrapper"></div>

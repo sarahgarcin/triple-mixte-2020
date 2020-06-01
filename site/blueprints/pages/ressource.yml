@@ -1,0 +1,18 @@
+title: Ressource
+preset: page
+pages: false
+
+fields:
+  cover: 
+    label: Image de couverture
+    type: files
+    width: 1/2
+    mode: single
+  infos: 
+    label: Texte synthétique / Infos
+    type: markdown
+    size: small
+  pdf: 
+    label: PDF
+    type: files
+

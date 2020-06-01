@@ -1,4 +1,27 @@
 // -------------- MOBILE-FIRST HOME --------------
+.home-message{
+	width: 100%;
+	height: 100vh; 
+	position:absolute;
+	top: 0;
+	left:0;
+	z-index: 200;
+	background: rgba(90, 90, 90, 0.6);
+	.home-message-content{
+		position: relative; 
+		background: #FFF; 
+		width: 60%; 
+		top: 50vh;
+		transform: translateY(-50%);
+		margin: auto;
+		padding: $marginBig;
+		h1{
+			color: $mainColor;
+			text-align: center; 
+		}
+	}
+}
+
 #home-slider{
 	position:absolute;
 	width:100%;

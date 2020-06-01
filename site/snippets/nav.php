@@ -1,4 +1,4 @@
-<div class="nav col-sm-6 row end-md">
+<div class="nav col-sm-8 row end-md">
 	<nav class="main-nav col-xs-12">
 		<ul class="main-nav_first-level row between-md middle-md">
 			<?php foreach($pages->listed() as $p): ?>

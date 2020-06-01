@@ -5,6 +5,11 @@ $(document).ready(function(){
 
 function init(){
 
+	// message pop-up
+	$('.home-message').on('click', function(){
+		$('.home-message').hide();
+	});
+
 	// SLICK SLIDER
   $('#home-slider').slick({
   	dots: true,
@@ -54,9 +59,10 @@ function init(){
 		$(".portraits-list li").find('article').removeClass('show');
 		if($(this).hasClass('active')){
 			$(this).removeClass('active');
-			$(this).find('article').removeClass('show')
+			$(this).find('article').removeClass('show');
 		}
 		else{
+			$(".portraits-list li").removeClass('active');
 			$(this).addClass('active');
 			$(this).find('article').addClass('show');
 		}

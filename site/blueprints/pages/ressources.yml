@@ -1,0 +1,7 @@
+title: Les ressources
+preset: pages
+drafts: 
+  template: 
+    - ressource
+    - atelier
+    - ressources  
