@@ -1,4 +1,7 @@
-
+  <footer>
+    
+  </footer>
+  
   <!-- scripts -->
   <?php
 

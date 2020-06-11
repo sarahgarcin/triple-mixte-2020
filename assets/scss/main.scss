@@ -26,15 +26,13 @@
   img {width: 100%;}
   figure{margin:0;}
   figcaption{
-    font-size: .8em;
-    &::before{
-      content: '→ ';
-    }
-    p{
-      margin:0; 
-      font-size: .8em;
-      display: inline-block;
-    }
+    font-size: .7em;
+    // &::before{
+    //   content: '→ ';
+    //   margin-right: 5px;
+    //   width: 50px;
+    //   display:block;
+    // }
   }
   p{
     font-size: $textSize; 

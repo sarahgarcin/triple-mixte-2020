@@ -5,8 +5,7 @@
 	<?php snippet('toppage') ?>			
 	<div class="content row">
 		<div class="left-col col-xs-10 col-xs-offset-1 col-md-3 hide-for-small-only">
-			<?php $image = $page->imgleft()->toFile()?>
-			<?php if($image):?>
+			<?php if($image = $page->imgleft()->toFile()):?>
 				<figure>
 					<img src="<?=$image->url()?>" alt="<?= $page->title()?>">
 				</figure>
@@ -31,7 +30,7 @@
 	                </a>
 		                
 		                <?php if($image->caption()->isNotEmpty()):?>
-											<figcaption itemprop="caption description"><?= $image->caption()->kt()?></figcaption>
+											<figcaption itemprop="caption description"><span>→ </span><?= $image->caption()->html()?></figcaption>
 										<?php endif; ?>
 		            </figure>
 

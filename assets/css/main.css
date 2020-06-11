@@ -39,13 +39,7 @@ figure {
   margin: 0; }
 
 figcaption {
-  font-size: .8em; }
-  figcaption::before {
-    content: '→ '; }
-  figcaption p {
-    margin: 0;
-    font-size: .8em;
-    display: inline-block; }
+  font-size: .7em; }
 
 p {
   font-size: 19px; }
@@ -267,7 +261,12 @@ header {
     padding: 40px; }
     .home-message .home-message-content h1 {
       color: #ff2d00;
-      text-align: center; }
+      text-align: center;
+      font-size: 30px;
+      margin-top: 0; }
+    .home-message .home-message-content p {
+      font-size: 16px;
+      margin-bottom: 40px; }
 
 #home-slider {
   position: absolute;
@@ -366,6 +365,9 @@ header {
       top: 15px; }
       .page-header h1 a:hover {
         border: none; }
+
+.pagesimple-block {
+  margin: auto; }
 
 .left-col {
   border-top: 1px solid #292929;

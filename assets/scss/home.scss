@@ -9,7 +9,8 @@
 	background: rgba(90, 90, 90, 0.6);
 	.home-message-content{
 		position: relative; 
-		background: #FFF; 
+		// background: rgba(255,255,255, 0.8); 
+		background: #FFF;
 		width: 60%; 
 		top: 50vh;
 		transform: translateY(-50%);
@@ -18,6 +19,12 @@
 		h1{
 			color: $mainColor;
 			text-align: center; 
+			font-size: 30px;
+			margin-top: 0;
+		}
+		p{
+			font-size: 16px;
+			margin-bottom: $marginBig;
 		}
 	}
 }

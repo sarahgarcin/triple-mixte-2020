@@ -1,0 +1,10 @@
+title: Page simple
+preset: page
+pages: false
+
+fields:
+  text:
+    label: Texte
+    type: markdown
+    size: medium
+

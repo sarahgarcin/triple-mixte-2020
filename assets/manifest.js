@@ -11,7 +11,6 @@ User settings for GUlp
  */
 module.exports.pluginScripts = [
   'node_modules/jquery/dist/jquery.js',
-  'assets/js/packery.pkgd.min.js',
   'assets/js/p5.js', 
   'assets/js/slick.min.js', 
   'node_modules/photoswipe/dist/photoswipe.min.js', 
