@@ -10,7 +10,7 @@
 					<h2 class="year-title"><?= $child->title() ?></h2>
 					<ul class="ateliers-wrapper row">
 						<?php foreach($child->children()->listed() as $subchild):?>
-							<li class=" col-xs-6 col-md-3">
+							<li class=" col-xs-12 col-md-3">
 								<a href="<?= $subchild->url()?>" title="<?= $subchild->title()?>">
 									<div class="atelier-image-cover">
 										<?php $image = $subchild->cover()->toFile()?>

@@ -9,7 +9,6 @@ header{
 	background: $mainColor;
 	z-index: 100; 
 	align-items: center;
-	// border-bottom: 1px solid #292929;
 	&.row{margin:0;}
 	a{text-decoration:none;}
 	.mobile-menu{
@@ -24,7 +23,7 @@ header{
 			color: #FFF; 
 			font-weight: 300; 
 			font-style: normal; 
-			font-size: 2rem;
+			font-size: 1.5rem;
 			margin-left: $marginSmall;
 			margin-bottom: 0;
 			margin-top:0;
@@ -32,12 +31,6 @@ header{
 		a{
 			border:none;
 		}
-	}
-	#canvas-wrapper{
-		width: 84px;
-		height: 84px; 
-		border: 2px solid #FFF; 
-		padding: 10px;
 	}
 	.mobile-menu_btn{
 		display:block;
@@ -116,9 +109,16 @@ header{
 @media only screen and (min-width: 48em){
 	header{
 		padding: 0px;
+		#canvas-wrapper{
+			width: 84px;
+			height: 84px;  
+			padding: 10px;
+			border: 2px solid #FFF; 
+		}
 		.mobile-menu_logo, .desktop-menu_logo{
 			padding: $marginSmall $marginBig;
 			h1{
+				font-size:2rem;
 				margin-top: 23px;
 			}
 		}
@@ -149,6 +149,18 @@ header{
 		}
 		.desktop-menu{
 			padding: 0;
+		}
+	}
+}
+
+@media only screen and (max-width: 1040px){
+	header{
+		#canvas-wrapper{
+			display:none;
+		}
+		.desktop-menu_logo h1{
+			margin:0;
+			font-size: 3vw;
 		}
 	}
 }

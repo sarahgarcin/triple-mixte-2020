@@ -118,17 +118,12 @@ header {
       color: #FFF;
       font-weight: 300;
       font-style: normal;
-      font-size: 2rem;
+      font-size: 1.5rem;
       margin-left: 10px;
       margin-bottom: 0;
       margin-top: 0; }
     header .mobile-menu_logo a, header .desktop-menu_logo a {
       border: none; }
-  header #canvas-wrapper {
-    width: 84px;
-    height: 84px;
-    border: 2px solid #FFF;
-    padding: 10px; }
   header .mobile-menu_btn {
     display: block;
     position: relative;
@@ -209,9 +204,15 @@ header {
 @media only screen and (min-width: 48em) {
   header {
     padding: 0px; }
+    header #canvas-wrapper {
+      width: 84px;
+      height: 84px;
+      padding: 10px;
+      border: 2px solid #FFF; }
     header .mobile-menu_logo, header .desktop-menu_logo {
       padding: 10px 40px; }
       header .mobile-menu_logo h1, header .desktop-menu_logo h1 {
+        font-size: 2rem;
         margin-top: 23px; }
     header .nav {
       height: auto;
@@ -241,6 +242,13 @@ header {
     header .desktop-menu {
       padding: 0; } }
 
+@media only screen and (max-width: 1040px) {
+  header #canvas-wrapper {
+    display: none; }
+  header .desktop-menu_logo h1 {
+    margin: 0;
+    font-size: 3vw; } }
+
 .home-message {
   width: 100%;
   height: 100vh;
@@ -252,13 +260,13 @@ header {
   .home-message .home-message-content {
     position: relative;
     background: #FFF;
-    width: 60%;
+    width: 95%;
     top: 50vh;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     margin: auto;
-    padding: 40px; }
+    padding: 20px; }
     .home-message .home-message-content h1 {
       color: #ff2d00;
       text-align: center;
@@ -272,13 +280,14 @@ header {
   position: absolute;
   width: 100%;
   height: calc(100vh - 52px);
-  top: 52px;
+  top: 47px;
   left: 0;
   overflow: hidden; }
   #home-slider figure {
     height: calc(100vh - 52px);
     position: relative; }
     #home-slider figure figcaption {
+      display: none;
       color: #FFF;
       font-size: 1.5rem;
       position: absolute;
@@ -330,12 +339,16 @@ header {
       opacity: 1; }
 
 @media only screen and (min-width: 64em) {
+  .home-message .home-message-content {
+    width: 60%;
+    padding: 40px; }
   #home-slider {
     height: calc(100vh - 88px);
     top: 88px; }
     #home-slider figure {
       height: calc(100vh - 88px); }
       #home-slider figure figcaption {
+        display: block;
         top: 50vh;
         left: 7%;
         -webkit-transform: translateY(-50%);
